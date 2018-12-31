@@ -35,8 +35,8 @@ regularpay2 = 1227.50
 
 sleep(2)
 print("")
-print("You completed:", these23days, "cases through the 23rd of this month, and ", (comp1+subclins1), "bonus cases at the end of last month.")
-print("\nYou should have ", this_month_total, "cases finished by the end of this month.")
+print("You completed:", these23days, "cases through the 23rd of this month, and", (comp1+subclins1), "bonus cases at the end of last month.")
+print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases.")
 
 
 # calculate bonus pay 1 (15th day of the current month) using an index agaist the tuple and accounting for any subclins
@@ -64,6 +64,6 @@ print("Your mid-month gross paycheck is: ", locale.currency(grosspaycheck1))
 sleep(1)
 print("Your month-end gross paycheck is: ", locale.currency(grosspaycheck2))
 sleep(1)
-print("For a grand total earned of: ", locale.currency(gross_income), ", which equates to ", locale.currency(gross_income*12), " per year.")
+print("For a grand total earned of: ", locale.currency(gross_income), "which equates to", locale.currency(gross_income*12), "per year.")
 sleep(1)
 print("\nDone.")
