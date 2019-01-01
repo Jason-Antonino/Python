@@ -6,6 +6,9 @@ locale.setlocale(locale.LC_ALL, '')
 
 # this tuple covers the first 20 cases done in a single month
 case_values = (491, 491, 491, 491, 491, 491, 491, 491, 491, 516, 516, 516, 516, 516, 563, 563, 563, 563, 563, 563)
+regularpay1 = 1227.50
+regularpay2 = 1227.50
+
 
 # these variables influence the mid-month paycheck
 last23days = int(input("Enter total whole number of cases finished from the 1st through the 23rd of last month: "))
@@ -31,9 +34,6 @@ isubclins1 = int(subclins1)
 isubclins2 = int(subclins2)
 ithis_month_total = int(this_month_total)
 
-
-regularpay1 = 1227.50
-regularpay2 = 1227.50
 
 sleep(2)
 print("")
@@ -66,7 +66,7 @@ print("Your mid-month gross paycheck is: ", locale.currency(grosspaycheck1))
 sleep(1)
 print("Your month-end gross paycheck is: ", locale.currency(grosspaycheck2))
 sleep(1)
-print("For a grand total earned of: ", locale.currency(gross_income), "which equates to", locale.currency(gross_income*12), "per year.")
+print("For a grand total earned of: ", locale.currency(gross_income), "this month, which equates to", locale.currency(gross_income*12), "per year.")
 sleep(1)
 print("\nDone.")
 input("\n\nPress Enter key to exit.")
