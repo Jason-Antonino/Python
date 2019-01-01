@@ -4,7 +4,7 @@ import locale
 locale.setlocale(locale.LC_ALL, '')
 
 
-# this tuple covers the first 20 cases done in a single month
+# this tuple covers the first 20 cases done in a single month; your minimum gross income is 2455 per month
 case_values = (491, 491, 491, 491, 491, 491, 491, 491, 491, 516, 516, 516, 516, 516, 563, 563, 563, 563, 563, 563)
 regularpay1 = 1227.50
 regularpay2 = 1227.50
@@ -18,6 +18,7 @@ comp2 = int(input("Enter number of cases completed from the 1st thru 8th day of 
 last_month_total = float(last23days + comp1 + subclins1)
 
 
+
 # these variables influence the month-end paycheck
 comp3 = int(input("Enter number of cases completed from the 9th thru 15th of this month: "))
 comp4 = int(input("Enter number of cases completed or will be completed from the 16th thru 23rd of this month: "))
@@ -25,6 +26,7 @@ comp5 = int(input("Enter predicted number of cases you'll complete between the 2
 subclins2 = float(input("Enter subclin decimal count this month, if any: "))
 these23days = float(comp2 + comp3 + comp4 + subclins2)
 this_month_total = float(comp2 + comp3 + comp4 + comp5 + subclins2)
+
 
 
 # converting floating numbers to integers
