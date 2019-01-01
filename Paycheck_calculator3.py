@@ -37,8 +37,8 @@ regularpay2 = 1227.50
 
 sleep(2)
 print("")
-print("You completed:", these23days, "cases through the 23rd of this month, and", (comp1+subclins1), "bonus cases at the end of last month.")
-print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases.")
+print("You completed:", last_month_total, "cases last month, which includes", comp1, "bonus cases and", subclins1, "subclins.")
+print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases and", subclins2, "subclins.")
 
 
 # calculate bonus pay 1 (15th day of the current month) using an index agaist the tuple and accounting for any subclins
