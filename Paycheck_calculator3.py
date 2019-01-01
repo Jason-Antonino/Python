@@ -1,6 +1,8 @@
 from time import sleep
+
 import locale
 locale.setlocale(locale.LC_ALL, '')
+
 
 # this tuple covers the first 20 cases done in a single month
 case_values = (491, 491, 491, 491, 491, 491, 491, 491, 491, 516, 516, 516, 516, 516, 563, 563, 563, 563, 563, 563)
@@ -67,3 +69,4 @@ sleep(1)
 print("For a grand total earned of: ", locale.currency(gross_income), "which equates to", locale.currency(gross_income*12), "per year.")
 sleep(1)
 print("\nDone.")
+input("\n\nPress Enter key to exit.")
