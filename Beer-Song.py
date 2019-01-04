@@ -2,7 +2,7 @@
 
 from random import randint
 
-x = randint(1, 100)
+x = randint(2, 100)
 for n in range(x):
     if x == 1:
         print (x, " bottle of beer on the wall,")
