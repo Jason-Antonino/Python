@@ -6,8 +6,8 @@ locale.setlocale(locale.LC_ALL, '')
 
 # this tuple covers the first 20 cases done in a single month; your minimum gross income is 2455 per month
 case_values = (491, 491, 491, 491, 491, 491, 491, 491, 491, 516, 516, 516, 516, 516, 563, 563, 563, 563, 563, 563)
-regularpay1 = 1227.50
-regularpay2 = 1227.50
+regularpay1 = 1227.50 #first paycheck based on only 5 cases per month
+regularpay2 = 1227.50 #second paycheck based on only 5 cases per month
 
 
 # these variables influence the mid-month paycheck
