@@ -1,4 +1,4 @@
-import time #imports the time module
+from time import sleep #imports the sleep function from the time module
 import sys #imports the sys module
 
 #gathering user inputs---------------------------
@@ -9,13 +9,13 @@ for x in range(numrefs): #this loop inputs a single reference number until it ha
     reference = input ("Type the patent or publication number (without spaces or kind codes): ")
     references.append(reference) #appends each successive reference number to the initially empty references set until it has reached the total number of references in your set that you specified
 
-span = len(references)
+span = len(references) #this gets the length of the references set in terms of the number of members
 
-time.sleep(1) #wait one second
+sleep(1) #wait one second
 
 #data validation-----------------------------
 print ("\nYou entered:", numrefs, "references, as follows:", references) #this prints out references populated by your entries in list format ['reference', 'reference', 'reference', ...]
-time.sleep(1)
+sleep(1)
 corr = input("Is this correct? (Y or N) ")
 
 if corr == "Y":
@@ -25,7 +25,7 @@ if corr == "N":
 
 #gathering user preferences--------------- 
 punc = input ("\nDo you want your references displayed with or without punctuation? Enter 1 for without characters and 2 for insert characters. ")
-time.sleep(1)
+sleep(1)
 orient = input ("\nDo you want to see a horizontal list, or would you rather have a vertical listing? Enter 1 for horizontal, 2 for vertical.  ")
 
 if punc == "1": #without characters
@@ -51,19 +51,19 @@ if punc == "1": #without characters
             
         else:
             print("You need to enter a 1 thru 4, buddy.")
-            time.sleep(0.5)
+            sleep(0.5)
             print("Try again.")
-            time.sleep(1)
+            sleep(1)
                       
     elif orient == "2": # 2 prints out each item in a vertical list in the order entered
         print("\nYour list: ")
-        time.sleep(1)
+        sleep(1)
         for reference in references: 
             print(reference)
             
     else:
         print("You need to enter 1 or 2, buddy.")
-        time.sleep(1)
+        sleep(1)
 
 elif punc == "2": #with characters
 
@@ -170,9 +170,9 @@ elif punc == "2": #with characters
 
         else:
             print("You need to enter a 1 thru 4, buddy.")
-            time.sleep(0.5)
+            sleep(0.5)
             print("Try again.")
-            time.sleep(1)
+            sleep(1)
             
     elif orient == "2": #with characters in vertical format
         print("\nYour list: ")
@@ -203,6 +203,6 @@ elif punc == "2": #with characters
                 
     else:
         print("You need to enter 1 or 2, buddy.")
-        time.sleep(1)
+        sleep(1)
         
 input("\n\nPress Enter to exit.")
