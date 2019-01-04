@@ -71,4 +71,6 @@ sleep(1)
 print("For a grand total earned of: ", locale.currency(gross_income), "this month, which equates to", locale.currency(gross_income*12), "per year.")
 sleep(1)
 print("\nDone.")
+
+for index, item in enumerate(case_values): print (index, item)
 input("\n\nPress Enter key to exit.")
