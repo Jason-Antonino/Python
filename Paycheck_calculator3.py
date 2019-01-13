@@ -4,10 +4,10 @@ import locale
 locale.setlocale(locale.LC_ALL, '')
 
 
-# this tuple covers the first 20 cases done in a single month; your minimum gross income is 2455 per month
+# this tuple covers the first 20 cases done in a single month; minimum gross income is 2455 per month, based on 5 cases finished
 case_values = (491, 491, 491, 491, 491, 491, 491, 491, 491, 516, 516, 516, 516, 516, 563, 563, 563, 563, 563, 563)
-regularpay1 = 1227.50 #first paycheck based on only 5 cases per month
-regularpay2 = 1227.50 #second paycheck based on only 5 cases per month
+regularpay1 = 1227.50
+regularpay2 = 1227.50
 
 
 # these variables influence the mid-month paycheck
@@ -18,15 +18,13 @@ comp2 = int(input("Enter number of cases completed from the 1st thru 8th day of 
 last_month_total = float(last23days + comp1 + subclins1)
 
 
-
 # these variables influence the month-end paycheck
 comp3 = int(input("Enter number of cases completed from the 9th thru 15th of this month: "))
 comp4 = int(input("Enter number of cases completed or will be completed from the 16th thru 23rd of this month: "))
-comp5 = int(input("Enter predicted number of cases you'll complete between the 24th and last day of this month: "))
-subclins2 = float(input("Enter subclin decimal count this month, if any: "))
+comp5 = int(input("Enter number of cases you'll complete between the 24th and last day of this month: "))
+subclins2 = float(input("Enter subclin decimal count thru the 23rd of this month, if any: "))
 these23days = float(comp2 + comp3 + comp4 + subclins2)
-this_month_total = float(comp2 + comp3 + comp4 + comp5 + subclins2)
-
+this_month_total = float(comp2 + comp3 + comp4 + subclins2 + comp5)
 
 
 # converting floating numbers to integers
@@ -43,8 +41,8 @@ print("You completed:", last_month_total, "cases last month, which includes", co
 print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases and", subclins2, "subclins.")
 
 
-# calculate bonus pay 1 (15th day of the current month) using an index agaist the tuple and accounting for any subclins
-bonuspay1 = sum(case_values[(last23days):(ilast_month_total)]) + (subclins1 - isubclins1) * case_values[(ilast_month_total)-1]
+# calculate bonus pay 1 (15th day of the current month) using an index against the tuple and accounting for any subclins
+bonuspay1 = sum(case_values[(last23days):(ilast_month_total)]) + ((subclins1 - isubclins1) * case_values[(ilast_month_total)-1])
 
 if comp2 > 5.0: #any cases over 5 in new month is a bonus case
     bonuspay1 += sum(case_values[5:(comp2)])
@@ -53,7 +51,7 @@ else:
 
 
 # calculate bonus pay 2 (last day of the current month) using an index agaist the tuple and accounting for any subclins
-bonuspay2 = sum(case_values[5:(ithese23days)]) + (subclins2 - isubclins2) * case_values[(ithese23days)-1]
+bonuspay2 = sum(case_values[5:(ithese23days)]) + ((subclins2 - isubclins2) * case_values[(ithese23days)-1])
 
 
 # calculating gross income
@@ -65,12 +63,18 @@ gross_income = grosspaycheck1 + grosspaycheck2
 # program outputs
 sleep(2)
 print("Your mid-month gross paycheck is: ", locale.currency(grosspaycheck1))
-sleep(1)
+sleep(2)
 print("Your month-end gross paycheck is: ", locale.currency(grosspaycheck2))
-sleep(1)
+sleep(2)
 print("For a grand total earned of: ", locale.currency(gross_income), "this month, which equates to", locale.currency(gross_income*12), "per year.")
 sleep(1)
 print("\nDone.")
 
-for index, item in enumerate(case_values): print (index, item)
+
+# case counts and dollar values table
+print("")
+print("Index of case counts and dollar values:")
+print("")
+sleep(2)
+for index, item in enumerate(case_values): print(index,item)
 input("\n\nPress Enter key to exit.")

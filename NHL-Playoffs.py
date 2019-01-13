@@ -37,10 +37,13 @@ for n in range(0, 7): #defines a best-of-seven series
 
     if counta == 4: #Team1 wins 4 games
         print("")
+        sleep(1)
         print(team1, "win the series", counta, "games to", countb)
         break
+
     elif countb == 4: #Team2 wins 4 games
         print("")
+        sleep(1)
         print(team2, "win the series", countb, "games to", counta)
         break
     
