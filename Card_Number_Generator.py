@@ -26,11 +26,11 @@ for num in range(4):
     x = randrange(10)
     cardnum.append(x)
 
-print("Your credit card number is: \n") #outputs credit card number on a new line
+print("Your credit card number is:\n") #outputs credit card number on a new line
 print(''.join(map(str, cardnum))) #converts list format to numerical string format
 
 print("")
-print("\nWith an expiration date of: ", randrange(1,13), "/", randrange(19,25))
-print("\nand a CVN/CVV of: ", randrange(100,1000))
+print("\nWith an expiration date of:", "{:0>2d}".format(randrange(1,13)), "/", randrange(19,25)) #formats the month as two digits
+print("\nand a CVN/CVV of:", "{:0>3d}".format(randrange(1,1000))) #formats the CVV as 3 digits
 
 input("\n\nPress any key to exit")
