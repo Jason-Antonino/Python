@@ -37,7 +37,7 @@ ithis_month_total = int(this_month_total)
 
 sleep(2)
 print("")
-print("You completed:", last_month_total, "cases last month, which includes", comp1, "bonus cases and", subclins1, "subclins.")
+print("\nYou completed:", last_month_total, "cases last month, which includes", comp1, "bonus cases, and" subclins1, "subclins.")
 print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases and", subclins2, "subclins.")
 
 
@@ -72,9 +72,11 @@ print("\nDone.")
 
 
 # case counts and dollar values table
+"""
 print("")
 print("Index of case counts and dollar values:")
 print("")
 sleep(2)
 for index, item in enumerate(case_values): print(index,item)
 input("\n\nPress Enter key to exit.")
+"""

@@ -32,8 +32,8 @@ for x in range(2):
     print(" ")  #prints blank space two times
 
 #DataCleaning------------------------------------
-sentence = sentence.replace(',', '') #removes commas
-sentence = sentence.replace('.', '') #removes periods
+sentence = sentence.replace(',', '') #removes commas by replacing them with an empty character
+sentence = sentence.replace('.', '') #removes periods by replacing them with an empty character
 sentence = sentence.split(' ') # break down sentence into individual words using a space as the delimiter
 
 #Reporting------------------------------------------------------------------------------------------------------------------------
