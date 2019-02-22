@@ -26,8 +26,8 @@ for num in range(4):
     x = randrange(10)
     cardnum.append(x)
 
-print("Your credit card number is: \n")
-print(''.join(map(str, cardnum)))
+print("Your credit card number is: \n") #outputs credit card number on a new line
+print(''.join(map(str, cardnum))) #converts list format to numerical string format
 
 print("")
 print("\nWith an expiration date of: ", randrange(1,13), "/", randrange(19,25))
