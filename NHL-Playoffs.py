@@ -50,4 +50,4 @@ for n in range(7): #defines a best-of-seven series starting from game zero and f
     print("")
     sleep(2)
 
-input("\n\nPress Enter to exit")
+input("\n\nPress Enter to exit.")
