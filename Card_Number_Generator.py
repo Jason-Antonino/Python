@@ -1,6 +1,6 @@
 from random import randrange
 
-cardnum = []
+cardnum = [] #credit card number starts out as an empty list
 
 #Four individual loops to generate four sets of 4 random numbers from 0 to 9, each set separated by a blank space
 

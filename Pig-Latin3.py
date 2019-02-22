@@ -3,6 +3,7 @@ import datetime #this imports the datetime module
 
 curr = datetime.datetime.now()
 print("Today is " + curr.strftime("%B") + " " + curr.strftime("%d") + ',' + " " + curr.strftime("%Y"))
+print(" ")
 
 #Data Entry---------------------------------------------
 sentence = input("Enter a word or sentence: ")
@@ -14,14 +15,12 @@ span = len(sentence)
 numwords = sentence.count(' ', 0, span)+1
 
 '''
-#this counts the number of spaces in the sentence 
-#starting from the first character of the first word and stopping at the last character of the last word, plus one, 
-#because there is no space after the end of the sentence
+#the above code counts the number of spaces in the sentence, starting from the first character of the first word (0) and stopping at the last character of the last word (span), plus one, because there is no space after the end of the sentence
 '''
 
 time.sleep(2)
 
-print("Your entry has", numwords, "words and is", span,"characters in length.")
+print("Your entry has", numwords, "words and is", span, "characters in length.")
 
 time.sleep(2)
 
