@@ -1,6 +1,11 @@
 from time import sleep
-
+from Tkinter import *
 import locale
+
+root = Tk()
+w = Label(root, text="Greetings")
+w.pack()
+
 locale.setlocale(locale.LC_ALL, '')
 
 
@@ -37,7 +42,7 @@ ithis_month_total = int(this_month_total)
 
 sleep(2)
 print("")
-print("\nYou completed:", last_month_total, "cases last month, which includes", comp1, "bonus cases, and" subclins1, "subclins.")
+print("\nYou completed:", last_month_total, "cases last month, which includes", comp1, "bonus cases, and", subclins1, "subclins.")
 print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases and", subclins2, "subclins.")
 
 
