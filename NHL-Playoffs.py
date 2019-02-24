@@ -38,7 +38,7 @@ for n in range(7): #defines a best-of-seven series starting from game zero and f
             sleep(2)
             print("")
         elif otwinnr == 1:
-            print(team2, y+1, ",", team1, x, " ", otnum,"(OT)") #Team2 wins in overtime
+            print(team2, y+1, ",", team1, x, " ", otnum,"OT") #Team2 wins in overtime
             print(team2, "win in overtime number", otnum)
             countb += 1
             sleep(2)

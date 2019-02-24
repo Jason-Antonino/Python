@@ -1,7 +1,6 @@
 from time import sleep
 import locale
 
-
 locale.setlocale(locale.LC_ALL, '')
 
 # this tuple covers the first 20 cases done in a single month; minimum gross income is 2455 per month, based on 5 cases finished
@@ -67,7 +66,7 @@ grosspaycheck2 = regularpay2 + bonuspay2 #last day of the month
 gross_income = grosspaycheck1 + grosspaycheck2
 
 
-# program outputs
+# program outputs----------------------------->
 sleep(1.5)
 print("\nYour mid-month gross paycheck is:", locale.currency(grosspaycheck1))
 sleep(1)
@@ -81,6 +80,6 @@ print("\nDone.")
 '''
 how to figure out how to account for any PTO days taken
 PTO is based on last 90 days of income
-Average monthly income over last 90 days
-Divide by about 21 to get value of one day of work
+get average monthly income over last 90 days
+then divide by about 21 to get value of one day of work
 '''

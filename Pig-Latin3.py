@@ -8,15 +8,14 @@ print(" ")
 #Data Entry---------------------------------------------
 sentence = input("Enter a word or sentence: ")
 time.sleep(1) #wait one second
-print("You entered: " + sentence + ".")
+print("You entered: " + sentence)
 
 #Analysis------------------------------------------------
 span = len(sentence)
 numwords = sentence.count(' ', 0, span)+1
 
-'''
 #the above code counts the number of spaces in the sentence, starting from the first character of the first word (0) and stopping at the last character of the last word (span), plus one, because there is no space after the end of the sentence
-'''
+
 
 time.sleep(2)
 
