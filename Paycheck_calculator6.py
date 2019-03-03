@@ -44,7 +44,9 @@ sleep(2)
 print("\nSummary Report")
 sleep(1)
 print("\nYou completed:", last_month_total, "cases last month, which includes", comp1, "bonus cases, and", subclins1, "subclins.")
+sleep(1)
 print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases and", subclins2, "subclins.")
+sleep(1)
 print("\nYou took a total of", PTO1+PTO2+PTO3, "PTO days over the last two pay periods.")
 
 # calculate bonus pay 1 (15th day of the current month) using an index against the tuple and accounting for any subclins and/or PTO days taken
@@ -67,7 +69,7 @@ gross_income = grosspaycheck1 + grosspaycheck2
 
 
 #outputs----------------------------->
-sleep(1.5)
+sleep(2)
 print("\nYour mid-month gross paycheck is:", locale.currency(grosspaycheck1))
 sleep(1)
 print("Your month-end gross paycheck is:", locale.currency(grosspaycheck2))

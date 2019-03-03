@@ -75,7 +75,7 @@ if punc == "1": #without characters
 elif punc == "2": #with characters
 
     if orient == "1": #horizontal format
-            
+        sleep(2)    
         sel = input ("\nHow do you want the references delimited? Enter 1 for 'OR'. Enter 2 for 'or'. Enter 3 for comma. Enter 4 for semicolon. ") #asks for user preference
         print ("\nYour list: ")
             
@@ -182,6 +182,7 @@ elif punc == "2": #with characters
             sleep(1)
             
     elif orient == "2": #with characters in vertical format
+        sleep(2)
         print("\nYour list: ")
         for reference in references: #prints out each reference with punctuation
             if reference[0:3] == "USD":
