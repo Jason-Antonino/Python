@@ -7,18 +7,18 @@ sleep(1)
 
 #Formulas -------------------------------------->
 c = CurrencyRates()
-dict = c.get_rates('USD') #dictionary of countries and conversion factors
+dict = c.get_rates('USD') #builds a dictionary of countries and conversion factors
 key = input("Enter 3-character code for the country you want (e.g. MXN, CAD): ")
 key = key.upper() #forces uppercase lettering
 
-exchrate = dict[key] #cross-reference country code with conversion factor in dictionary
+exchrate = dict[key] #cross-reference the country code with its conversion factor in the dictionary
 exchrate = float(exchrate)
 
 gas_price = input("Enter the price PER LITER of gas in the foreign currency: ")
 gas_price = float(gas_price)
 
 liters = 1.00
-gallons = 3.785 * liters
+gallons = 3.785 * liters #converts price per liter to price per US gallon
 
 usdollars = gas_price / exchrate #converts gas price to USD
 convprice = usdollars * gallons #converts to USD per gallon
