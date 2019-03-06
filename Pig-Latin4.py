@@ -40,15 +40,15 @@ sentence = sentence.replace('!', '') #removes exclamation points
 sentence = sentence.split(' ') # break down sentence into individual words using a space as the delimiter
 
 
-#Reporting------------------------------------------------------------------------------------------------------------------------
+#Reporting---------------------------------------->
 for word in sentence: # this loop prints each word starting with the second character and appends the first character and "ay" to the end of the word until the last word has been changed
-    if len(word) >=2:
-        word = word + word[0] + "ay" #modify the word to append the first character (word[0]) and "ay" to the end
-        word = word[1: ] #then modifying the modified word to start with the second character (word[1]) and continue to the last character (word[])
+    if len(word) >=2: #if a word is two or more characters in length
+        word = word[1: ] + word[0] + "ay" #modify the word to append the first character (word[0]) and "ay" to the end, and making the word begin with the second character (word[1]) and end with the last character
         print(word.lower(), end = ' ') #print the new Pig Latin word in lowercase plus a space at the end, and append the next word to this word until the loop is finished
         time.sleep(0.75)
         
     elif len(word) == 1:
         print(word, end = ' ') #if a word is a single character then just print it out with a space at the end and keep going until the loop is finished
+        time.sleep(0.75)
 
 input("\n\nPress Enter to exit.")

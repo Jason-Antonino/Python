@@ -26,7 +26,7 @@ def calendar_print(year, month1, month2):
 calendar_print(year, month1, month2)
 sleep(1)
 
-#PROGRAM INPUTS--------------------------------------------------------->
+#PROGRAM INPUTS------------------------------------------------------->
 print("Please answer the following 12 questions. If you do not know the answer, give your best guess. No blank fields are allowed.")
 sleep(2)
 
