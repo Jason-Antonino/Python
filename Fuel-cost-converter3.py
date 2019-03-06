@@ -2,7 +2,7 @@ from time import sleep
 from forex_python.converter import CurrencyRates
 import datetime
 
-print("International Fuel Conversion Cost Calculator")
+print("International Fuel Cost Conversion Calculator")
 sleep(1)
 
 #Formulas -------------------------------------->
@@ -24,13 +24,13 @@ usdollars = gas_price / exchrate #converts gas price to USD
 convprice = usdollars * gallons #converts to USD per gallon
 
 today = datetime.datetime.now()
-today = today.strftime("%B") + " " + today.strftime("%d") + ',' + " " + today.strftime("%Y")
+today = (today.strftime("%B") + " " + today.strftime("%d") + ',' + " " + today.strftime("%Y"))
 
 sleep(2)
 
 #Output ---------------------------------------->
 print("\nYour price is", '${:,.3f}'.format(convprice), "per US gallon.")
-sleep(1)
+sleep(1.5)
 print("\nThere are", exchrate, key, "per US dollar, as of", today + ".")
-sleep(0.5)
-input("\n\nPress any key to exit.")
+sleep(1)
+input("\n\nPress Enter key to exit.")
