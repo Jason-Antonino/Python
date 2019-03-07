@@ -2,7 +2,6 @@ print("Best of Seven NHL Playoff Series")
 
 from time import sleep
 from random import randrange
-#from random import choice
 
 team1 = input("Enter first team name: ")
 team2 = input("Enter second team name: ")
@@ -32,13 +31,13 @@ for n in range(7): #defines a best-of-seven series starting from game zero and f
         otwinnr = randrange(2) #picks a zero or one to decide overtime winner
         otnum = randrange(1,5) #number of overtime periods ranging from 1 to 4
         if otwinnr == 0:
-            print(team1, x+1, ",", team2, y, " ", otnum,"OT") #Team1 wins in overtime 
+            print(team1, x+1, ",", team2, y, " ", "(", otnum,"OT)") #Team1 wins in overtime 
             print(team1, "win in overtime number", otnum)
             counta += 1
             sleep(2)
             print("")
         elif otwinnr == 1:
-            print(team2, y+1, ",", team1, x, " ", otnum,"OT") #Team2 wins in overtime
+            print(team2, y+1, ",", team1, x, " ", "(", otnum,"OT)") #Team2 wins in overtime
             print(team2, "win in overtime number", otnum)
             countb += 1
             sleep(2)

@@ -12,9 +12,14 @@ regularpay2 = 1227.50
 # Print Calendar
 print("Welcome to the GPS Paycheck Calculator")
 sleep(2)
+
 year = int(input("\nEnter year as 4-digit number: "))
 month1 = int(input("Enter last month as 1 or 2-digit number: "))
 month2 = int(input("Enter current month as 1 or 2-digit number: "))
+
+#Correlating month numbers to month names (index numbers 0 through 11, inclusive)
+list_of_months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
 
 def calendar_print(year, month1, month2):
     print ("")
@@ -22,10 +27,15 @@ def calendar_print(year, month1, month2):
     print ("")
     print (calendar.month(year, month2))
     print ("")
-    return
+    return(month1, month2)
     
-calendar_print(year, month1, month2)
+calendar_print(year, month1, month2) #calls the above function using the 3 earlier inputs
+
+month1name = (list_of_months[(month1)-1]) #converts the last month number to the month name
+month2name = (list_of_months[(month2)-1]) #same but for the current month
+
 sleep(1)
+
 
 #PROGRAM INPUTS------------------------------------------------------->
 print("Please answer the following 12 questions. If you do not know the answer, give your best guess. No blank fields are allowed.")
@@ -33,6 +43,7 @@ sleep(2)
 
 last90 = float(input("1. Enter average gross monthly income over the last 90 days: "))
 PTOvalue = (last90 / 21) #estimated value of a single PTO day taken, based on average of 21 working days in a month
+
 
 # these variables influence the mid-month paycheck
 last23days = int(input("2. Enter total whole number of cases finished from the 1st through the 23rd of last month: "))
@@ -72,9 +83,9 @@ for x in range(20):
     print("-", end='')
 sleep(1)
 
-print("\nYou completed:", last_month_total, "cases last month, which includes", comp1, "bonus cases, and", subclins1, "subclins.")
+print("\nYou completed:", last_month_total, "cases in", month1name, ", which includes", comp1, "bonus cases, and", subclins1, "subclins.")
 sleep(2)
-print("\nYou should have", this_month_total, "cases finished by the end of this month, which includes", (these23days-5), "bonus cases and", subclins2, "subclins.")
+print("\nYou should have", this_month_total, "cases finished by the end of", month2name, ", which includes", (these23days-5), "bonus cases and", subclins2, "subclins.")
 sleep(2)
 print("\nYou took a total of", PTO1+PTO2+PTO3, "PTO days over the last two pay periods.")
 

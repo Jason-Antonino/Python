@@ -30,13 +30,13 @@ sleep(2)
 
 #Output ---------------------------------------->
 print('')
-for x in range(10):
+for x in range(12):
     print(".", end='')
-    sleep(0.4)
+    sleep(0.3)
 
 print('')    
-print("\nYour price is", '${:,.3f}'.format(convprice), "per US gallon.")
+print("\nYour price is", '${:,.3f}'.format(convprice), "per US Gallon.")
 sleep(1.5)
-print("\nThere are", exchrate, key, "per US dollar, as of", today + ".")
+print("\nThere are", exchrate, key, "per US Dollar, as of", today + ".")
 sleep(1.75)
 input("\n\nPress Enter key to exit.")
