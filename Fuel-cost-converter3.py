@@ -7,11 +7,11 @@ sleep(1)
 
 #Formulas -------------------------------------->
 c = CurrencyRates()
-dict = c.get_rates('USD') #builds a dictionary of countries and conversion factors
-key = input("Enter 3-character code for the country you want (e.g. MXN, CAD): ")
-key = key.upper() #forces uppercase lettering
+dictionary = c.get_rates('USD') #builds a dictionary of countries and conversion factors
+code = input("Enter 3-character code for the country you want (e.g. MXN, CAD): ")
+code.upper() #forces uppercase lettering
 
-exchrate = dict[key] #cross-reference the country code with its conversion factor in the dictionary
+exchrate = dictionary[code] #cross-reference the country code with its conversion factor in the dictionary
 exchrate = float(exchrate)
 
 gas_price = input("Enter the price PER LITER of gas in the foreign currency: ")
@@ -32,11 +32,11 @@ sleep(2)
 print('')
 for x in range(12):
     print(".", end='')
-    sleep(0.3)
+    sleep(0.25)
 
 print('')    
 print("\nYour price is", '${:,.3f}'.format(convprice), "per US Gallon.")
 sleep(1.5)
-print("\nThere are", exchrate, key, "per US Dollar, as of", today + ".")
+print("\nThere are", exchrate, code, "per US Dollar, as of", today + ".")
 sleep(1.75)
-input("\n\nPress Enter key to exit.")
+input("\n\nPress Enter code to exit.")
