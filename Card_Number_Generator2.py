@@ -36,11 +36,11 @@ cardnum.append(n)
 #OUTPUTS------------------------------
 print("Congratulations! Your card account data is below.")
 cardnum = ''.join(map(str, cardnum)) #removes list formatting by converting the list to a string and then deleting the brackets and commas
-sleep(1.25)
+sleep(1.5)
 print("\nYour credit card number is:", cardnum)
-sleep(1.25)
+sleep(1.5)
 print("\nWith an expiration date of:", "{:0>2d}".format(randrange(1,13)), "/", randrange(19,24)) #two-digit month / two-digit year from 2019-2023
-sleep(1.25)
+sleep(1.5)
 print("\nand a CVN/CVV of:", "{:0>3d}".format(randrange(1,1000))) #three-digit CVV number 1 to 999 with padded zeroes to the left
 sleep(1)
 input("\n\nPress enter key to exit.")

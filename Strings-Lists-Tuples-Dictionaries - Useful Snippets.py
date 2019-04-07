@@ -5,12 +5,12 @@ Created on Mon Mar  4 22:40:08 2019
 @author: jason
 """
 
-list1 = []
-list2 = []
+list1 = [] #empty list to store individual letters
+list2 = [] #empty list to store words
 
 string = "This is a string of alphanumeric characters that we can manipulate"
 
-sentence = string.split(' ') #creates sentence by splitting string by spaces
+sentence = string.split(' ') #creates a sentence by splitting the string by spaces
 
 
 for char in string: #iterates through each letter in the string and builds a list of characters
@@ -21,7 +21,7 @@ for word in sentence: #same but builds a list of words
     list2.append(word) #appends the word to the list 2
 
 print("")
-print("String:", string[ : ]) #prints the string character by character from beginning to end
+print("String:", string[ : ]) #prints the string character-by-character from beginning to end
 print("")
 print("String backwards:", string[ : :-1]) #prints each character but from the end to the beginning
 print("")
@@ -49,3 +49,20 @@ print("Tuple 1:", tuple1)
 print("")
 print("Tuple 2:", tuple2)
 print("")
+
+for each in range(10):
+    print("Your mom") #prints the string vertically
+
+for each in range(10):
+    print("Your mom", end=' ') #prints the string horizontally
+
+my_list = ['one', 'two', 'three', 'four', 'five']
+my_list_len = len(my_list)
+for i in range(0, my_list_len):
+    print(my_list[i]) #prints each item in the list one at a time, each on its own line (vertically)
+
+for i in range(0, my_list_len):
+    print(my_list[i], end=" ") #prints each item in the list one at a time, horizontally (side-by-side)
+
+
+input("\n\nPress enter key to exit.")
