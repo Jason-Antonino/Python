@@ -4,7 +4,7 @@ password = [] #empty list to store created password
 random_character = ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", "|", "/", ",", ".", "<", ">", "?", ";", ":", "\\") #tuple of password character choices
 
 def get_info(password):
-    length = input("How many characters for your password?: ")
+    length = input("\nHow many characters for your password?: ")
     length = int(length)
     run_loop(length, password) #calls the run_loop function and passes the length and empty password to it
 
